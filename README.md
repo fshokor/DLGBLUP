@@ -3,7 +3,7 @@
 ## Summary
 DLGBLUP is a hybrid model combining deep learning and GBLUP (genomic best linear unbiased prediction) to predict multiple correlated traits' genetic value (GV). It consists of two steps: first, the GVs are predicted using a multi-trait GBLUP based on the genomic data, then GVs are re-predicted using a DL model that captures potential non-linear genetic correlations between traits. [[Link](https://www.biorxiv.org/content/10.1101/2024.03.23.585208v1)]
 
-## Illustration
+![Demo Video](https://github.com/fshokor/DLGBLUP/blob/main/DLGBLUP_Illustration.gif)
 
 ## Requirements 
 ### R
