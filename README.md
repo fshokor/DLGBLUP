@@ -38,8 +38,32 @@ To install the required packages, run the following command in your terminal or 
 pip install numpy==1.23.5 pandas==2.0.1 matplotlib==3.7.1 seaborn==0.12.2 scipy==1.10.1 sklearn==1.2.2 tqdm==4.65.0 torch==2.0.1+cu117
 ```
 ## Data simulation 
+To simulate the genomic data run: 
+
+[R_scripts/sim_geno.R](https://github.com/fshokor/DLGBLUP/blob/main/R_scripts/sim_geno.R)
+
+--> Outputs: 
+- Genomic matrix coded as 0, 1, and 2 (.txt file)
+- Phased data (.Rdata)
+
+To simulate the phenotypic and genetic values data run [R_scripts/sim_pheno.R](https://github.com/fshokor/DLGBLUP/blob/main/R_scripts/sim_pheno.R)
+
+--> Output: (.csv files) 
+- Phenotypes
+- True Genetic Value
+- QTL_df with the position and the effect of the common QTL
+- ErrQTLEffect_df with the effect of specific QTLs for all dependent traits
+- ErrQTLpos_df the positions of specific QTLs for all dependent traits 
+
+All this files can be found in [Data](https://github.com/fshokor/DLGBLUP/tree/main/Data) directory
+
 ## Run GBLUP
+Run a GBLUP multitrait model using [R_scripts/MTGBLUP_Additive.R](https://github.com/fshokor/DLGBLUP/blob/main/R_scripts/MTGBLUP_Additive.R) 
+
+--> Output: a data frame of predicted genetic value for all traits
+
 ## DLGBLUP model
+To train DLGBLUP model and analyse the results use [DL_Models/DLGBLUP.ipynb](https://github.com/fshokor/DLGBLUP/blob/main/DL_Models/DLGBLUP.ipynb)
 
 ## Citation
 If you find the work helpful, you can cite it using the following citation:
