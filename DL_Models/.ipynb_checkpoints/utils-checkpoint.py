@@ -119,13 +119,10 @@ def evaluateMT(Real_df, Predicted_df):
     return pd.DataFrame(all_results)
 
 
-def plot_Traits(*dataframes, colors=None, show_legend=False, legend_names=None, plot_size=None):
+def plot_Traits(*dataframes, colors=None, show_legend=False, legend_names=None, path=None):
     num_dataframes = len(dataframes)
     num_traits = dataframes[0].shape[1]
-    if plot_size is None:
-        sns.set(rc={'figure.figsize': (30, 5)})
-    else: 
-        sns.set(rc={'figure.figsize': plot_size})
+    sns.set(rc={'figure.figsize': (22, 4)})
     sns.set_style("white")
 
     # Use provided colors or default to a seaborn color palette
@@ -156,14 +153,18 @@ def plot_Traits(*dataframes, colors=None, show_legend=False, legend_names=None, 
             if i == 0:  # Add label only once
                 plot_labels.append(scatter)
 
-        ax.set_xlabel("Trait 1")
-        ax.set_ylabel(f"Trait {i + 2}")
+        #ax.set_xlabel("Trait 1")
+        #ax.set_ylabel(f"Trait {i + 2}")
         ax.tick_params(labelsize= 15)
 
     if show_legend:
         plt.legend(handles=plot_labels, labels=legend_names, loc='upper center', bbox_to_anchor=(0.5, -0.1), ncol=num_dataframes)
-
+    
     plt.tight_layout()
+    
+    if path:
+        plt.savefig(path)
+        
     plt.show()
 
 def corloss(g, y_hat):
