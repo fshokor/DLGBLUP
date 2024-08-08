@@ -29,13 +29,13 @@ install.packages(c("GenEval", "data.table", "dplyr", "ggplot2", "gridExtra", "cg
 - matplotlib: 3.7.1
 - scipy: 1.10.1
 - seaborn: 0.12.2
-- sklearn: 1.2.2
+- scikit-learn: 1.3.1
 - tqdm: 4.65.0
 - torch: 2.0.1+cu117
   
 To install the required packages, run the following command in your terminal or command prompt:
 ```shell
-pip install numpy==1.23.5 pandas==2.0.1 matplotlib==3.7.1 seaborn==0.12.2 scipy==1.10.1 sklearn==1.2.2 tqdm==4.65.0 torch==2.0.1+cu117
+pip install numpy==1.23.5 pandas==2.0.1 matplotlib==3.7.1 seaborn==0.12.2 scipy==1.10.1 scikit-learn==1.3.1 tqdm==4.65.0 torch==2.1.2
 ```
 ## Data simulation 
 To simulate the genomic data run: 
